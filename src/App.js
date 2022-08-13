@@ -43,6 +43,7 @@ function handleInfo(url){
     setImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + response.id + ".png")
     console.log(response.id);
     setType(response.types)
+    console.log(response.types[0].type.name);
     setStats(response.stats)
   })
 }
@@ -54,15 +55,17 @@ function handleInfo(url){
       <div onClick={()=>handleInfo(item.url)}>{item.name}</div>
     ))
   }
-
-  <button onClick={handlePrevious}>previous</button>
+  <div className="btns">
+  <button  onClick={handlePrevious}>previous</button>
   <button onClick={handleNext}>next</button>
+  </div>
   </div> 
   <div className="detalhe">
 <Detalhe
   image= {image}
   nome= {nome}
   stats ={stats}
+  type= {type}
 />
 </div>
 
