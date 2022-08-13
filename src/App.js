@@ -1,14 +1,15 @@
 import React,{useState,useEffect} from "react"
-
+import Detalhe from "./components/detalhe"
+import "./App.css"
 function App(){
 
-const[pokemons, setPokemons] = useState([])
+const [pokemons, setPokemons] = useState([])
 const [next, setNext] = useState("")
 const [previous, setPrevious] = useState("")
 const [nome, setNome] = useState("")
 const [image, setImage] = useState("")
 const [type, setType] = useState([])
-const [stats, setStats] =useState([])
+const [stats, setStats] = useState([])
 
 
 const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/")
@@ -39,15 +40,16 @@ function handleInfo(url){
   .then(response =>{
     console.log(response)
     setNome(response.name)
-    setImage(response.sprites.other.dream_world.front_default)
+    setImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + response.id + ".png")
+    console.log(response.id);
     setType(response.types)
     setStats(response.stats)
   })
 }
 
   return(
-  <>
-  {
+  <div className="container">
+ <div className="nomes">{
    pokemons && pokemons.map((item)=>(
       <div onClick={()=>handleInfo(item.url)}>{item.name}</div>
     ))
@@ -55,36 +57,16 @@ function handleInfo(url){
 
   <button onClick={handlePrevious}>previous</button>
   <button onClick={handleNext}>next</button>
+  </div> 
+  <div className="detalhe">
+<Detalhe
+  image= {image}
+  nome= {nome}
+  stats ={stats}
+/>
+</div>
 
-  <div>
-    <div>
-      <img src={image}/>
-      <div>{nome}</div>
-      {
-   type && type.map((item)=>(
-      <button>{item.type.name}</button>
-    ))
-  }
-
-{
-   stats && stats.slice(0,3).map((item)=>(
-    <div> 
-    <span>{item.stat.name}</span>
-      <div>{item.base_stat}</div>
-      </div>
-    ))
-  }
-       {
-   stats && stats.slice(5).map((item)=>(
-    <div> 
-    <span>{item.stat.name}</span>
-      <div>{item.base_stat}</div>
-      </div>
-    ))
-  }
-    </div>
   </div>
-  </>
 
   )
 }
