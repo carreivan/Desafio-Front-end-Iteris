@@ -1,27 +1,28 @@
-.barra{
+.barra {
   width: 70%;
   height: 15px;
   border: 1px solid white;
-  background-color:#333;
+  background-color: #333;
   position: relative;
 }
-.barra-item{
+
+.barra-item {
   position: absolute;
   top: 0;
   z-index: 5;
 }
 
-.per{
-position: absolute;
-top: 0;
-z-index:10;
-width: 100%;
-height: 15px;
-font-size: 10px;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
+.per {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 15px;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -31,56 +32,73 @@ align-items: center;
   align-items: center;
   justify-content: center;
   gap: 3%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
 }
 
-.nomes{
+.iniciar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.nomes {
   width: 40%;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: aqua;
-  padding: 10px;
+  padding: 10px 0;
   cursor: pointer;
 
 
+
 }
 
-.detalhe{
+.detalhe {
   width: 40%;
   height: 80%;
-  background-color: blue;
+  /* background-color: blue; */
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  padding: 10px 0;
+
+
 
 }
 
-.btns{
+.btns {
   display: flex;
   gap: 10px;
+  padding-left: 10px;
 }
-.image{
+
+.image {
   width: 100%;
   height: 50%;
- 
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
-.image img{
+.image img {
   height: 300px;
 }
 
-.tipos{
+.tipos {
   width: 100%;
   height: 40%;
- 
+
 }
+
 .element {
   display: flex;
   gap: 5px;
@@ -91,7 +109,8 @@ align-items: center;
   font-size: 22px;
   text-transform: uppercase;
 }
-.barra-content{
+
+.barra-content {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -103,4 +122,153 @@ align-items: center;
   color: white;
   font-size: 17px;
   text-transform: uppercase;
+}
+
+.name {
+  font-size: 17px;
+  color: white;
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+
+.name:hover {
+  background-color: #333;
+}
+
+@media (max-width: 1025px) {
+  .barra {
+    width: 70%;
+    height: 15px;
+    border: 1px solid white;
+    background-color: #333;
+    position: relative;
+  }
+
+  .barra-item {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+  }
+
+  .per {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 15px;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: column;
+    padding: 20px 0;
+
+  }
+
+  .iniciar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .nomes {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 10px 0;
+    cursor: pointer;
+    order: 2;
+
+  }
+
+  .detalhe {
+    width: 90%;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    order: 1;
+
+
+
+  }
+
+  .btns {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+  }
+
+  .image {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .image img {
+    height: 300px;
+  }
+
+  .tipos {
+    width: 100%;
+    height: 40%;
+
+  }
+
+  .element {
+    display: flex;
+    gap: 5px;
+  }
+
+  .nome2 {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  .barra-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .barra-content span {
+    width: 20%;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+
+  .name {
+    font-size: 17px;
+    color: white;
+    text-transform: capitalize;
+    padding-left: 10px;
+  }
+
+  .name:hover {
+    background-color: #333;
+  }
 }
