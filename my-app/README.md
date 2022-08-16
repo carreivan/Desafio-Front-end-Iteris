@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+#Desafio SomoS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Biblioteca: <React.js>
 
-## Available Scripts
+#Descrição
 
-In the project directory, you can run:
+Este é um projeto Front-end que contém um catálogo de pokemon, que são trazidos da API https://pokeapi.co/api/v2/pokemon; Com uma açao para exibir os detalhes de um determinado pokemon, do lado direito da lista caso o usuário clique em um dos nomes dos pokemons. Tambem podemos conhecer os elementos do pokemon e suas estatísticas de batalha.
+![principal](https://user-images.githubusercontent.com/52723118/184987125-821b74e0-521c-4eef-83ab-a4f4658524eb.png)
+![secundario](https://user-images.githubusercontent.com/52723118/184987186-fa049d21-ee80-417e-86d9-4142c4cbb3a8.png)
 
-### `npm start`
+Além de trazer o pokemon eles tem um Easter Egg integrado no pokemon pikachu que é ativado clicando 3 vezes em sua foto.
+Tem um botão chamado Iniciar para voltar à lista de todos os pokemon.
+![easter egg1](https://user-images.githubusercontent.com/52723118/184987672-0eaa1c25-432a-410b-b62b-df2752f47697.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Pré-requisitos 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Antes de inciar, se assegure que possoui os requisitos abaixo:
 
-### `npm test`
+conhecimento sobre javascript e React.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Visual Studio Code
 
-### `npm run build`
+Node Js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#Execução
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para executar este projeto siga estes passos: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+baixe o repositório da seguinte forma:
 
-### `npm run eject`
+![descarga](https://user-images.githubusercontent.com/52723118/184992183-feb4b44e-a1b2-4dc6-adb8-7e1df91e92c4.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Extraia o arquivo zip e abra a pasta com o Visual Studio Code
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Com o terminal aberto do Visual Studio Code
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+execute os seguintes comandos :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd my-app
 
-## Learn More
+npm i
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![console](https://user-images.githubusercontent.com/52723118/184993244-eb76dcfe-c921-4bc2-895a-ece4c5bf8997.PNG)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Aguarde a instalação de todos os pacotes
 
-### Code Splitting
+então basta executar o último comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm start
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
