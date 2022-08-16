@@ -19,6 +19,8 @@ const [element, setElement] = useState("")
 var color;
 const [colorBack, setColorBack] = useState("")
 const [height, setHeight] = useState("")
+var image2 ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+
 
 
 
@@ -45,37 +47,45 @@ function handlePrevious(){
 setUrl(previous)
 }
 
-function handleInfo(url){
+function handleInfo(url) {
   console.log(url);
   fetch(url)
-  .then(response => response.json())
-  .then(response =>{
-    console.log(response)
-    setNome(response.name)
-    setImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + response.id + ".png")
-    console.log(response.id);
-    setType(response.types)
-    console.log(response.types[0].type.name);
-    setStats(response.stats)
-    setShows(true)
-     setElement(response.types[0].type.name)
-    setHeight(!height)
-  })
+    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      setNome(response.name)
+      setImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + response.id + ".png")
+      console.log(response.id);
+      setType(response.types)
+      console.log(response.types[0].type.name);
+      setStats(response.stats)
+      setShows(true)
+      setElement(response.types[0].type.name)
+      setHeight(!height)
+      setCount(1)
+    })
 }
 //function do EASTER EGG
 
-function handleImage(src){
+const handleImage =(src)=>{
 
-setCount(count +1)
-  if(count === 3 ){
-    setBackground("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg")
+setCount(count + 1)
+
+if(count>2){
+  setCount(1)
+}
+if(count ===3 && image===image2){
+
+     setCount(1)
+     setBackground("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg")
     setShows(false)
     setStart(false)
     setColorBack(color)
     setHeight("100vh")
-  }
 }
 
+
+}
 function handleStart(){
   window.location.reload(true);
 }
