@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react"
 import Detalhe from "./components/detalhe"
 import "./App.css"
+
 function App(){
 
 const [pokemons, setPokemons] = useState([])
@@ -15,10 +16,11 @@ const [shows, setShows] = useState(false)
 const [count, setCount] = useState(1)
 const [background, setBackground] = useState("")
 const [element, setElement] = useState("")
- var color;
- const [colorBack, setColorBack] = useState("")
- const [height, setHeight] = useState("")
- 
+var color;
+const [colorBack, setColorBack] = useState("")
+const [height, setHeight] = useState("")
+
+
 
 
 
@@ -60,12 +62,13 @@ function handleInfo(url){
     setHeight(!height)
   })
 }
+//function do EASTER EGG
 
 function handleImage(src){
 
 setCount(count +1)
-  if(count === 3){
-    setBackground(src)
+  if(count === 3 ){
+    setBackground("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg")
     setShows(false)
     setStart(false)
     setColorBack(color)
